@@ -379,6 +379,11 @@ angular.module('akoenig.deckgrid').factory('Deckgrid', [
                 }
             }
 
+            // https://github.com/akoenig/angular-deckgrid/issues/69
+            if(!content || content === '') {
+                content = '3 .column.column-1-3';
+            }
+
             return layout;
         };
 
